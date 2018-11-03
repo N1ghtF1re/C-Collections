@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include "list.h"
 
+/* ### UTILS ### */
 /**
  * Check list for empty
  * @param head - Pointer to the head of the list
@@ -20,6 +21,44 @@ int list_isEmpty(Node *head) {
     } else {
         return 0;
     }
+}
+
+/**
+ * Getting the number of list items
+ * @param head - Pointer to the head of the list
+ * @return
+ */
+int list_size(Node *head) {
+    if(list_isEmpty(head)) return 0;
+
+    Node *tmp = head->next;
+
+    int size = 0;
+    while(tmp) {
+        size++;
+        tmp = tmp->next;
+    }
+
+    return size;
+}
+
+/**
+ * List to array conversion
+ * @param head - Pointer to the head of the list
+ * @return array
+ */
+NodeInfo* list_toArray(Node *head) {
+    int length = list_size(head);
+    NodeInfo *arr = malloc(length * sizeof(NodeInfo));
+
+    Node *tmp = head->next;
+    int i = 0;
+    while(tmp) {
+        arr[i++] = tmp->info;
+        tmp = tmp->next;
+    }
+
+    return arr;
 }
 
 

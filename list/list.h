@@ -36,7 +36,7 @@ int list_size(Node *head);
 void list_deleteList(Node *head);
 void list_remove(Node *head, int index);
 
-NodeInfo list_ToArray(Node *head);
+NodeInfo* list_toArray(Node *head);
 int list_isEmpty(Node *head);
 
 #endif //LIST_H
