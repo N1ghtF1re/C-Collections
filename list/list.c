@@ -23,7 +23,7 @@ int list_isEmpty(Node *head) {
 }
 
 
-/* GET ITEM */
+/* ### GET ITEM ### */
 
 /**
  * Returns Nth item
@@ -59,7 +59,6 @@ NodeInfo list_getLast(Node *head) {
     return tmp->info;
 }
 
-
 /**
  * Gets the first item in the list.
  * @param head - Pointer to the head of the list
@@ -68,6 +67,76 @@ NodeInfo list_getLast(Node *head) {
 NodeInfo list_getFirst(Node *head) {
     if(list_isEmpty(head)) exit(-1);
     return head->next->info;
+}
+
+
+/*  ### POP ITEM ### */
+
+/**
+ * Gets and removes the last item in the list.
+ * @param head - Pointer to the head of the list
+ * @return deleted last item
+ */
+NodeInfo list_popLast(Node *head) {
+    if (list_isEmpty(head)) exit(-1);
+
+    Node *prev = head; // Preview item
+    Node *curr = head->next;  // Current item;
+    while(curr->next) {
+        prev = curr;
+        curr = curr->next;
+    }
+    NodeInfo result = curr->info;
+    prev->next = NULL; // Remove last item
+    free(curr); // Free memory
+    return result;
+}
+
+/**
+ * Gets and removes the Nth item in the list.
+ * @param head - Pointer to the head of the list
+ * @return deleted Nth item
+ */
+NodeInfo list_pop(Node* head, int index) {
+    if (list_isEmpty(head)) exit(-1);
+
+    int i = 0;
+    Node *curr = head->next;
+    Node *prev = head;
+    while((i++ < index) && curr) {
+        prev = curr;
+        curr = curr->next;
+
+    }
+    if(curr == NULL) exit(-1);
+
+    NodeInfo result = curr->info;
+
+    // Remove item:
+    prev->next = curr->next;
+    free(curr);
+
+
+    return result;
+}
+
+
+/**
+ * Gets and removes the first item in the list.
+ * @param head - Pointer to the head of the list
+ * @return deleted first item
+ */
+NodeInfo list_popFirst(Node *head) {
+    if (list_isEmpty(head)) exit(-1);
+
+    Node *tmp = head->next;
+
+    NodeInfo result = tmp->info;
+
+    head->next = tmp->next;
+    free(tmp);
+
+    return result;
 }
 
 
