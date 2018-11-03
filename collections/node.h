@@ -7,6 +7,9 @@
 
 typedef struct NodeInfo {
     int intValue;
+    char *stringValue;
+    double realValue;
+    void *pointerValue;
 } NodeInfo;
 
 typedef struct Node {
