@@ -141,5 +141,58 @@ NodeInfo list_popFirst(Node *head) {
 
 
 
+/*  ### INSERT ITEM ### */
+
+Node* list_createElement(NodeInfo data) {
+    Node *el = (Node*) malloc(sizeof(Node));
+    el->info = data;
+    return el;
+}
+
+/**
+ * Adds an item to the end of the list.
+ * @param head - Pointer to the head of the list
+ * @param data - Element information structure
+ */
+void list_insertLast(Node *head, NodeInfo data) {
+    Node *tmp = head;
+    while(tmp->next) {
+        tmp = tmp->next;
+    }
+
+    tmp->next = NULL;
+    tmp->next = list_createElement(data);
+}
+
+/**
+ * Adds an item to the top of the list.
+ * @param head - Pointer to the head of the list
+ * @param data - Element information structure
+ */
+void list_insertFirst(Node *head, NodeInfo data) {
+    Node *nextEl = head->next; // Current first item, will become the second
+    Node *newEl = list_createElement(data); // New first item
+    newEl->next = nextEl;
+    head->next = newEl;
+}
+
+/**
+ * Adds an item to Nth position of the list.
+ * @param head - Pointer to the head of the list
+ * @param data - Element information structure
+ */
+void list_insert(Node* head, int index, NodeInfo data) {
+    int i = 0;
+    Node *tmp = head->next;
+    while((i++ < index-1) && tmp) {
+        tmp = tmp->next;
+    }
+    if((tmp == NULL) || (tmp->next == NULL)) exit(-1);
+
+    // tmp - element after which you want to insert an element
+    Node *newEl = list_createElement(data);
+    newEl->next = tmp->next;
+    tmp->next = newEl;
+}
 
 #endif //LIST_C
