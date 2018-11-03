@@ -47,7 +47,7 @@ NodeInfo stack_pop(Node *head) {
 
 /**
  * Remove stack
- * @param head  - Pointer to the pointer to the head of the stack (Need use: stack_removeList(&head))
+ * @param head  - Pointer to the pointer to the head of the stack (Need use: stack_remove(&head))
  */
 void stack_remove(Node **head) {
     list_removeList(head);
