@@ -9,6 +9,7 @@
 
 Node* list_create() {
     Node *el = (Node*) malloc(sizeof(Node));
+    el->next = NULL;
     return el;
 }
 /**
@@ -189,6 +190,7 @@ NodeInfo list_popFirst(Node *head) {
 Node* list_createElement(NodeInfo data) {
     Node *el = (Node*) malloc(sizeof(Node));
     el->info = data;
+    el->next = NULL;
     return el;
 }
 
