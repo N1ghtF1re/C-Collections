@@ -10,6 +10,11 @@
 #include "list.h"
 
 /* ### UTILS ### */
+
+Node* list_create() {
+    Node *el = (Node*) malloc(sizeof(Node));
+    return el;
+}
 /**
  * Check list for empty
  * @param head - Pointer to the head of the list
@@ -49,6 +54,9 @@ int list_size(Node *head) {
  */
 NodeInfo* list_toArray(Node *head) {
     int length = list_size(head);
+    if(length == 0) return malloc(0);
+
+    // Create array:
     NodeInfo *arr = malloc(length * sizeof(NodeInfo));
 
     Node *tmp = head->next;
@@ -232,6 +240,31 @@ void list_insert(Node* head, int index, NodeInfo data) {
     Node *newEl = list_createElement(data);
     newEl->next = tmp->next;
     tmp->next = newEl;
+}
+
+/* ### REMOVE ITEMS || LIST ### */
+
+/**
+ * Remove all items of the list
+ * @param head  - Pointer to the pointer to the head of the list (Need use: list_removeList(&head))
+ */
+void list_removeList(Node **head) {
+    Node *tmp = *head;
+    while(tmp) {
+        Node *next = tmp->next;
+        free(tmp);
+        tmp = next;
+    }
+    *head = NULL; // Set null pointer to the head
+}
+
+/**
+ * Remove Nth item of the list
+ * @param head  - Pointer to the head of the list
+ * @param index - The index of the item to be deleted.
+ */
+void list_remove(Node *head, int index) {
+    list_pop(head, index);
 }
 
 #endif //LIST_C

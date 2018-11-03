@@ -14,6 +14,9 @@ typedef struct Node {
     struct Node *next;
 } Node;
 
+// CONSTRUCTOR (head creation)
+Node* list_create();
+
 // GET ITEM
 NodeInfo list_getLast(Node *head);
 NodeInfo list_getFirst(Node *head);
@@ -33,7 +36,7 @@ void list_insert(Node* head, int index, NodeInfo data);
 int list_size(Node *head);
 
 // DELETE:
-void list_deleteList(Node *head);
+void list_removeList(Node **head);
 void list_remove(Node *head, int index);
 
 NodeInfo* list_toArray(Node *head);
