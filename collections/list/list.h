@@ -5,14 +5,7 @@
 #ifndef LIST_H
 #define LIST_H
 
-typedef struct NodeInfo {
-    int intValue;
-} NodeInfo;
-
-typedef struct Node {
-    NodeInfo info;
-    struct Node *next;
-} Node;
+#include "../node.h"
 
 // CONSTRUCTOR (head creation)
 Node* list_create();
