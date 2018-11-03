@@ -2,10 +2,6 @@
 // LIST IMPLEMENTATION
 //
 
-
-#ifndef LIST_C
-#define LIST_C
-
 #include <stdlib.h>
 #include "list.h"
 
@@ -267,4 +263,3 @@ void list_remove(Node *head, int index) {
     list_pop(head, index);
 }
 
-#endif //LIST_C

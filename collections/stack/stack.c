@@ -2,9 +2,6 @@
 // STACK IMPLEMENTATION
 //
 
-#ifndef STACK_C
-#define STACK_C
-
 #include "stack.h"
 #include "../list/list.h"
 
@@ -56,5 +53,3 @@ void stack_remove(Node **head) {
     list_removeList(head);
 }
 
-
-#endif //STACK_C
