@@ -31,7 +31,7 @@ int list_isEmpty(Node *head) {
 /**
  * Getting the number of list items
  * @param head - Pointer to the head of the list
- * @return
+ * @return size
  */
 int list_size(Node *head) {
     if(list_isEmpty(head)) return 0;
