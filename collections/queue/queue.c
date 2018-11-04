@@ -2,6 +2,12 @@
 // QUEUE IMPLEMENTATION
 //
 
+/**
+ * @file queue.c
+ * @author Alexandr Pankratiew
+ * @brief File containing implementation of Queue
+ */
+
 #include "queue.h"
 #include "../list/list.h"
 

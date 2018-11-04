@@ -2,6 +2,12 @@
 // QUEUE INTERFACE
 //
 
+/**
+ * @file queue.h
+ * @author Alexandr Pankratiew
+ * @brief File containing interface of Queue
+ */
+
 #ifndef QUEUE_H
 #define QUEUE_H
 

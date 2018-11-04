@@ -2,6 +2,12 @@
 // HASHMAP INTERFACE
 //
 
+/**
+ * @file hashmap.h
+ * @author Alexandr Pankratiew
+ * @brief File containing interface of hashMap
+ */
+
 #ifndef HASHMAP_H
 #define HASHMAP_H
 

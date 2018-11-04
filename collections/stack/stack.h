@@ -2,6 +2,11 @@
 // STACK INTERFACE
 //
 
+/**
+ * @file stack.h
+ * @author Alexandr Pankratiew
+ * @brief File containing interface of Stack
+ */
 
 #ifndef STACK_H
 #define STACK_H

@@ -2,6 +2,12 @@
 // HASHMAP IMPLEMENTATION
 //
 
+/**
+ * @file hashmap.c
+ * @author Alexandr Pankratiew
+ * @brief File containing implementation of hashMap
+ */
+
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -135,7 +141,7 @@ int hashmap_containsKey(HashMap map, Key key) {
 /**
  * Returns the number of key-value mappings in the map.
  *
- * ATTENTION! FUNCTION DOES NOT RETURN NUMBER OF BASKETS. THIS INFORMATION IS STORED IN THE STRUCTURE HashMap
+ * @warning ATTENTION! FUNCTION DOES NOT RETURN NUMBER OF BASKETS. THIS INFORMATION IS STORED IN THE STRUCTURE HashMap
  *
  * @param map HashMap
  * @return number of key-value mappings in this map.

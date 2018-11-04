@@ -2,6 +2,12 @@
 // STACK IMPLEMENTATION
 //
 
+/**
+ * @file stack.c
+ * @author Alexandr Pankratiew
+ * @brief File containing implementation of Stack
+ */
+
 #include "stack.h"
 #include "../list/list.h"
 

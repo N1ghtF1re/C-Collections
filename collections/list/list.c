@@ -2,6 +2,12 @@
 // LIST IMPLEMENTATION
 //
 
+/**
+ * @file list.c
+ * @author Alexandr Pankratiew
+ * @brief File containing implementation of List
+ */
+
 #include <stdlib.h>
 #include "list.h"
 

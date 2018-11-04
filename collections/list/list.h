@@ -2,6 +2,12 @@
 // LIST INTERFACE
 //
 
+/**
+ * @file list.c
+ * @author Alexandr Pankratiew
+ * @brief File containing interface of List
+ */
+
 #ifndef LIST_H
 #define LIST_H
 
