@@ -1,0 +1,15 @@
+digraph "collections" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d5762d0567c4c00fccbddb05db217c60 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_d5762d0567c4c00fccbddb05db217c60.html"];
+    dir_d5762d0567c4c00fccbddb05db217c60 [shape=plaintext label="collections"];
+    dir_abd213e5aa7d55a2e4f938e9fd68a1e3 [shape=box label="hashmap" color="black" fillcolor="white" style="filled" URL="dir_abd213e5aa7d55a2e4f938e9fd68a1e3.html"];
+    dir_fe179f5a0cd46862189cb836271fc7bc [shape=box label="list" color="black" fillcolor="white" style="filled" URL="dir_fe179f5a0cd46862189cb836271fc7bc.html"];
+    dir_acd1ec9753d35c14093b5a0ab60f7aa9 [shape=box label="queue" color="black" fillcolor="white" style="filled" URL="dir_acd1ec9753d35c14093b5a0ab60f7aa9.html"];
+    dir_cfd8cad10ecd3edb3f27388d7806eec6 [shape=box label="stack" color="black" fillcolor="white" style="filled" URL="dir_cfd8cad10ecd3edb3f27388d7806eec6.html"];
+  }
+  dir_acd1ec9753d35c14093b5a0ab60f7aa9->dir_fe179f5a0cd46862189cb836271fc7bc [headlabel="1", labeldistance=1.5 headhref="dir_000007_000006.html"];
+  dir_cfd8cad10ecd3edb3f27388d7806eec6->dir_fe179f5a0cd46862189cb836271fc7bc [headlabel="1", labeldistance=1.5 headhref="dir_000008_000006.html"];
+}

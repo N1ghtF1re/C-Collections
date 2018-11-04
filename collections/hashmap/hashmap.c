@@ -118,7 +118,7 @@ Value hashmap_get(HashMap map, Key key, Value defaultValue) {
 
 /**
  * Returns the value to which the specified key is mapped
- * @warning If you are not sure that the key exists, you should check it with the help of the hashmap_containsKey or use a hashmap_get that will return the default value if the key is not defined.
+ * @warning If you are not sure that the key exists, you should check it with the help of the hashmap_containsKey(HashMap map, Key key) or use a hashmap_get(HashMap map, Key key, Value defaultValue) that will return the default value if the key is not defined.
  * @warning When using this function with a non-existing key, the behavior is undefined.
  * @param map HashMap
  * @param key the key whose associated value is to be returned
