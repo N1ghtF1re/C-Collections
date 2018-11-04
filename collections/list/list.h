@@ -3,7 +3,7 @@
 //
 
 /**
- * @file list.c
+ * @file list.h
  * @author Alexandr Pankratiew
  * @brief File containing interface of List
  */

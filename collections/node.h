@@ -2,6 +2,12 @@
 // NODE TYPE
 //
 
+
+/**
+ * Description of the collection node type
+ * @file node.h
+ */
+
 #ifndef NODE_H
 #define NODE_H
 
