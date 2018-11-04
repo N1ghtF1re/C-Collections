@@ -5,6 +5,9 @@
 #include <stdlib.h>
 #include "list.h"
 
+#define true 1
+#define false 0
+
 /* ### UTILS ### */
 
 Node* list_create() {
@@ -18,11 +21,7 @@ Node* list_create() {
  * @return 1 is list is empty, else - 0
  */
 int list_isEmpty(Node *head) {
-    if ((head == NULL) || (head->next == NULL)) {
-        return 1;
-    } else {
-        return 0;
-    }
+    return (head == NULL) || (head->next == NULL) ? true : false;
 }
 
 /**
