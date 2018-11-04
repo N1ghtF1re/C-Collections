@@ -89,15 +89,17 @@ void hashmap_put(HashMap map, Key key, Value value) {
     tmp->next = el;
 }
 
+
 /**
  * Returns the value to which the specified key is mapped
  * @param map HashMap
  * @param key the key whose associated value is to be returned
+ * @param defaultValue - The value that will be returned if the key does not exist.
+ *        If you are sure of a key, use hashmap_forceGet(HashMap map, Key key)
  * @return the value to which the specified key is mapped
  */
-Value hashmap_get(HashMap map, Key key) {
+Value hashmap_get(HashMap map, Key key, Value defaultValue) {
     if (key == NULL) exit(-1);
-
 
     unsigned int hash = hashmap_hashCode(key);
 
@@ -110,10 +112,24 @@ Value hashmap_get(HashMap map, Key key) {
             return e->value;
     }
 
+    return defaultValue;
+}
+
+
+/**
+ * Returns the value to which the specified key is mapped
+ * @warning If you are not sure that the key exists, you should check it with the help of the hashmap_containsKey or use a hashmap_get that will return the default value if the key is not defined.
+ * @warning When using this function with a non-existing key, the behavior is undefined.
+ * @param map HashMap
+ * @param key the key whose associated value is to be returned
+ * @return the value to which the specified key is mapped
+ */
+Value hashmap_forceGet(HashMap map, Key key) {
+    Value value;
     errno = EINVAL;
     perror("Appeal to non-existent key");
-
-    exit(-1); // an attempt to access a non-existent key is an undefined behavior. I do what I want ;)
+    perror(key);
+    return hashmap_get(map, key, value);
 }
 
 /**

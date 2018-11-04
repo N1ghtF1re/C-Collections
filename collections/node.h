@@ -5,7 +5,7 @@
 #ifndef NODE_H
 #define NODE_H
 
-typedef struct NodeInfo {
+typedef union NodeInfo {
     int intValue;
     char *stringValue;
     double realValue;

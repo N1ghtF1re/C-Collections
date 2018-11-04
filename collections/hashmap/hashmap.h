@@ -31,7 +31,8 @@ typedef struct HashMap {
 HashMap hashmap_create(int size);
 unsigned int hashmap_hashCode(Key key);
 void hashmap_put(HashMap map, Key key, Value value);
-Value hashmap_get(HashMap map, Key key);
+Value hashmap_get(HashMap map, Key key, Value defaultValue);
+Value hashmap_forceGet(HashMap map, Key key);
 int hashmap_isEmpty(HashMap map);
 int hashmap_containsKey(HashMap map, Key key);
 int hashmap_size(HashMap map);

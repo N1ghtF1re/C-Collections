@@ -78,6 +78,7 @@ NodeInfo* list_toArray(Node *head) {
  * Returns Nth item
  * @param head - Pointer to the head of the list
  * @param index - The index of the desired item (Starting from zero, the head is not considered)
+ * @warning In the case of accessing a non-existent element, the program will be immediately terminated with the code -1
  * @return Nth item
  */
 NodeInfo list_get(Node* head, int index) {
@@ -96,6 +97,7 @@ NodeInfo list_get(Node* head, int index) {
 /**
  * Gets the last item in the list.
  * @param head - Pointer to the head of the list
+ * @warning In the case of accessing a non-existent element, the program will be immediately terminated with the code -1
  * @return last item
  */
 NodeInfo list_getLast(Node *head) {
@@ -111,6 +113,7 @@ NodeInfo list_getLast(Node *head) {
 /**
  * Gets the first item in the list.
  * @param head - Pointer to the head of the list
+ * @warning In the case of accessing a non-existent element, the program will be immediately terminated with the code -1
  * @return first item
  */
 NodeInfo list_getFirst(Node *head) {
@@ -124,6 +127,7 @@ NodeInfo list_getFirst(Node *head) {
 /**
  * Gets and removes the last item in the list.
  * @param head - Pointer to the head of the list
+ * @warning In the case of accessing a non-existent element, the program will be immediately terminated with the code -1
  * @return deleted last item
  */
 NodeInfo list_popLast(Node *head) {
@@ -144,6 +148,7 @@ NodeInfo list_popLast(Node *head) {
 /**
  * Gets and removes the Nth item in the list.
  * @param head - Pointer to the head of the list
+ * @warning In the case of accessing a non-existent element, the program will be immediately terminated with the code -1
  * @return deleted Nth item
  */
 NodeInfo list_pop(Node* head, int index) {
@@ -173,6 +178,7 @@ NodeInfo list_pop(Node* head, int index) {
 /**
  * Gets and removes the first item in the list.
  * @param head - Pointer to the head of the list
+ * @warning In the case of accessing a non-existent element, the program will be immediately terminated with the code -1
  * @return deleted first item
  */
 NodeInfo list_popFirst(Node *head) {
@@ -230,6 +236,7 @@ void list_insertFirst(Node *head, NodeInfo data) {
  * Adds an item to Nth position of the list.
  * @param head - Pointer to the head of the list
  * @param data - Element information structure
+ * @warning In the case of accessing a non-existent element, the program will be immediately terminated with the code -1
  */
 void list_insert(Node* head, int index, NodeInfo data) {
     int i = 0;
