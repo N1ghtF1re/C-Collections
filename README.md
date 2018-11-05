@@ -18,6 +18,7 @@ Currently the library contains:
 + Queue
 + Stack
 + HashMap
++ Binary Search Tree
 
 ## Nodes type
 The main type is specified in the node.h file.
