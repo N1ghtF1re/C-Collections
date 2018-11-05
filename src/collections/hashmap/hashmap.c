@@ -41,7 +41,7 @@ HashMap hashmap_create(int size) {
  * @param key - Key
  * @return hash for a key
  */
-unsigned int hashmap_hashCode(Key key) {
+unsigned int hashmap_hashCode(HashmapKey key) {
     unsigned int hash = 5381;
     int c;
 
@@ -57,7 +57,7 @@ unsigned int hashmap_hashCode(Key key) {
  * @param key - key with which the specified value is to be associated
  * @param value - value to be associated with the specified key
  */
-void hashmap_put(HashMap map, Key key, Value value) {
+void hashmap_put(HashMap map, HashmapKey key, HashmapValue value) {
     if (key == NULL)
         exit(-1);
     unsigned int hash = hashmap_hashCode(key); // HASH OF STRING
@@ -67,7 +67,7 @@ void hashmap_put(HashMap map, Key key, Value value) {
 
     // Check if there is such a key in the [i] item of the table. And if there is, replace the value
     for (e = map.table[i]; e != NULL; e = e->next) {
-        Key k;
+        HashmapKey k;
         if (e->hash == hash && ((k = e->key) == key || !strcmp(k, e->key))) {
             e->value = value;
             return;
@@ -95,10 +95,10 @@ void hashmap_put(HashMap map, Key key, Value value) {
  * @param map HashMap
  * @param key the key whose associated value is to be returned
  * @param defaultValue - The value that will be returned if the key does not exist.
- *        If you are sure of a key, use hashmap_forceGet(HashMap map, Key key)
+ *        If you are sure of a key, use hashmap_forceGet(HashMap map, HashmapKey key)
  * @return the value to which the specified key is mapped
  */
-Value hashmap_get(HashMap map, Key key, Value defaultValue) {
+HashmapValue hashmap_get(HashMap map, HashmapKey key, HashmapValue defaultValue) {
     if (key == NULL) exit(-1);
 
     unsigned int hash = hashmap_hashCode(key);
@@ -107,7 +107,7 @@ Value hashmap_get(HashMap map, Key key, Value defaultValue) {
 
     HashMapEntry *e;
     for (e=map.table[i]; e != NULL; e = e->next){
-        Key k;
+        HashmapKey k;
         if (e->hash == hash && ((k = e->key) == key || !strcmp(k, e->key)))
             return e->value;
     }
@@ -118,14 +118,14 @@ Value hashmap_get(HashMap map, Key key, Value defaultValue) {
 
 /**
  * Returns the value to which the specified key is mapped
- * @warning If you are not sure that the key exists, you should check it with the help of the hashmap_containsKey(HashMap map, Key key) or use a hashmap_get(HashMap map, Key key, Value defaultValue) that will return the default value if the key is not defined.
+ * @warning If you are not sure that the key exists, you should check it with the help of the hashmap_containsKey(HashMap map, HashmapKey key) or use a hashmap_get(HashMap map, HashmapKey key, HashmapValue defaultValue) that will return the default value if the key is not defined.
  * @warning When using this function with a non-existing key, the behavior is undefined.
  * @param map HashMap
  * @param key the key whose associated value is to be returned
  * @return the value to which the specified key is mapped
  */
-Value hashmap_forceGet(HashMap map, Key key) {
-    Value value;
+HashmapValue hashmap_forceGet(HashMap map, HashmapKey key) {
+    HashmapValue value;
     errno = EINVAL;
     perror("Appeal to non-existent key");
     perror(key);
@@ -138,7 +138,7 @@ Value hashmap_forceGet(HashMap map, Key key) {
  * @param key - key whose presence in this map is to be tested
  * @return 1 if this map contains a mapping for the specified key
  */
-int hashmap_containsKey(HashMap map, Key key) {
+int hashmap_containsKey(HashMap map, HashmapKey key) {
     if (key == NULL) exit(-1);
 
     unsigned int hash = hashmap_hashCode(key);
@@ -146,7 +146,7 @@ int hashmap_containsKey(HashMap map, Key key) {
 
     HashMapEntry *e;
     for (e=map.table[i]; e != NULL; e = e->next){
-        Key k;
+        HashmapKey k;
         if (e->hash == hash && ((k = e->key) == key || !strcmp(k, e->key)))
             return true;
     }
@@ -214,7 +214,7 @@ HashMapEntry* hashmap_entryArr(HashMap map) {
  * @param key key whose mapping is to be removed from the map
  * @return the previous value associated with key
  */
-HashMapEntry hashmap_remove(HashMap map, Key key) {
+HashMapEntry hashmap_remove(HashMap map, HashmapKey key) {
     if (key == NULL) exit(-1);
 
 
@@ -225,7 +225,7 @@ HashMapEntry hashmap_remove(HashMap map, Key key) {
     HashMapEntry *e;
     HashMapEntry *prev = map.table[i];
     for (e=map.table[i]->next; e != NULL; e = e->next){
-        Key k;
+        HashmapKey k;
         if (e->hash == hash && ((k = e->key) == key || !strcmp(k, e->key))) {
             HashMapEntry entry = *e;
             prev->next = e->next;

@@ -13,12 +13,12 @@
 
 #include "../node.h"
 
-typedef char* Key;
-typedef NodeInfo Value;
+typedef char* HashmapKey;
+typedef NodeInfo HashmapValue;
 
 typedef struct HashMapEntry {
-    Key key;
-    Value value;
+    HashmapKey key;
+    HashmapValue value;
     struct HashMapEntry *next;
     unsigned int hash;
 } HashMapEntry;
@@ -29,14 +29,14 @@ typedef struct HashMap {
 } HashMap;
 
 HashMap hashmap_create(int size);
-unsigned int hashmap_hashCode(Key key);
-void hashmap_put(HashMap map, Key key, Value value);
-Value hashmap_get(HashMap map, Key key, Value defaultValue);
-Value hashmap_forceGet(HashMap map, Key key);
+unsigned int hashmap_hashCode(HashmapKey key);
+void hashmap_put(HashMap map, HashmapKey key, HashmapValue value);
+HashmapValue hashmap_get(HashMap map, HashmapKey key, HashmapValue defaultValue);
+HashmapValue hashmap_forceGet(HashMap map, HashmapKey key);
 int hashmap_isEmpty(HashMap map);
-int hashmap_containsKey(HashMap map, Key key);
+int hashmap_containsKey(HashMap map, HashmapKey key);
 int hashmap_size(HashMap map);
-HashMapEntry hashmap_remove(HashMap map, Key key);
+HashMapEntry hashmap_remove(HashMap map, HashmapKey key);
 void hashmap_clear(HashMap map);
 void hashmap_removeMap(HashMap *map);
 HashMapEntry* hashmap_entryArr(HashMap map);
