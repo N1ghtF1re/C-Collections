@@ -1,12 +1,12 @@
-digraph "collections/list/list.h"
+digraph "src/collections/list/list.h"
 {
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node2 [label="collections/list/list.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 [label="src/collections/list\l/list.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="collections/list/list.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$list_8c.html",tooltip="File containing implementation of List. "];
+  Node3 [label="src/collections/list\l/list.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$list_8c.html",tooltip="File containing implementation of List. "];
   Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="collections/queue/queue.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$queue_8c.html",tooltip="File containing implementation of Queue. "];
+  Node4 [label="src/collections/queue\l/queue.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$queue_8c.html",tooltip="File containing implementation of Queue. "];
   Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="collections/stack/stack.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stack_8c.html",tooltip="File containing implementation of Stack. "];
+  Node5 [label="src/collections/stack\l/stack.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stack_8c.html",tooltip="File containing implementation of Stack. "];
 }

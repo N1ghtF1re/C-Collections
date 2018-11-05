@@ -11,6 +11,10 @@
 #include "queue.h"
 #include "../list/list.h"
 
+/**
+ * Creating a queue head
+ * @return Pointer to the created head
+ */
 Node* queue_create() {
     return list_create();
 }

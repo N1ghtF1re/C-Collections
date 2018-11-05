@@ -1,24 +1,28 @@
-digraph "collections/node.h"
+digraph "src/collections/node.h"
 {
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="collections/node.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="src/collections/node.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="collections/hashmap\l/hashmap.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$hashmap_8h.html",tooltip="File containing interface of hashMap. "];
+  Node2 [label="src/collections/hashmap\l/hashmap.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$hashmap_8h.html",tooltip="File containing interface of hashMap. "];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="collections/hashmap\l/hashmap.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$hashmap_8c.html",tooltip="File containing implementation of hashMap. "];
+  Node3 [label="src/collections/hashmap\l/hashmap.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$hashmap_8c.html",tooltip="File containing implementation of hashMap. "];
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="collections/list/list.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$list_8h.html",tooltip="File containing interface of List. "];
+  Node4 [label="src/collections/list\l/list.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$list_8h.html",tooltip="File containing interface of List. "];
   Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="collections/list/list.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$list_8c.html",tooltip="File containing implementation of List. "];
+  Node5 [label="src/collections/list\l/list.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$list_8c.html",tooltip="File containing implementation of List. "];
   Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="collections/queue/queue.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$queue_8c.html",tooltip="File containing implementation of Queue. "];
+  Node6 [label="src/collections/queue\l/queue.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$queue_8c.html",tooltip="File containing implementation of Queue. "];
   Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="collections/stack/stack.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stack_8c.html",tooltip="File containing implementation of Stack. "];
+  Node7 [label="src/collections/stack\l/stack.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stack_8c.html",tooltip="File containing implementation of Stack. "];
   Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 [label="collections/queue/queue.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$queue_8h.html",tooltip="File containing interface of Queue. "];
+  Node8 [label="src/collections/queue\l/queue.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$queue_8h.html",tooltip="File containing interface of Queue. "];
   Node8 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node9 [label="collections/stack/stack.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stack_8h.html",tooltip="File containing interface of Stack. "];
+  Node9 [label="src/collections/stack\l/stack.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$stack_8h.html",tooltip="File containing interface of Stack. "];
   Node9 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="src/collections/tree\l/binarysearchtree.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$binarysearchtree_8h.html",tooltip="File containing interface of Binary Search Tree. "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="src/collections/tree\l/binarysearchtree.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$binarysearchtree_8c.html",tooltip="File containing implementation of Binary Search Tree. "];
 }

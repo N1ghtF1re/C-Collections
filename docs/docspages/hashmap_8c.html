@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Collections Library: collections/hashmap/hashmap.c File Reference</title>
+<title>Collections Library: src/collections/hashmap/hashmap.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,8 +97,8 @@ $(document).ready(function(){initNavTree('hashmap_8c.html','');});
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for hashmap.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="hashmap_8c__incl.png" border="0" usemap="#collections_2hashmap_2hashmap_8c" alt=""/></div>
-<map name="collections_2hashmap_2hashmap_8c" id="collections_2hashmap_2hashmap_8c">
+<div class="center"><img src="hashmap_8c__incl.png" border="0" usemap="#src_2collections_2hashmap_2hashmap_8c" alt=""/></div>
+<map name="src_2collections_2hashmap_2hashmap_8c" id="src_2collections_2hashmap_2hashmap_8c">
 </map>
 </div>
 </div><table class="memberdecls">
@@ -115,24 +115,24 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a66489a19d0371663840bf118e1b8c790"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_hash_map.html">HashMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#a66489a19d0371663840bf118e1b8c790">hashmap_create</a> (int size)</td></tr>
 <tr class="separator:a66489a19d0371663840bf118e1b8c790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1730a90e32ce091daa97b0f07fe14f4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#af1730a90e32ce091daa97b0f07fe14f4">hashmap_hashCode</a> (Key key)</td></tr>
-<tr class="separator:af1730a90e32ce091daa97b0f07fe14f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d5b1463ca6fa5121dae6b4fce78630e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#a5d5b1463ca6fa5121dae6b4fce78630e">hashmap_put</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map, Key key, <a class="el" href="union_node_info.html">Value</a> value)</td></tr>
-<tr class="separator:a5d5b1463ca6fa5121dae6b4fce78630e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8413bf74c7fbc6cf38e31f4958b7f78a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="union_node_info.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#a8413bf74c7fbc6cf38e31f4958b7f78a">hashmap_get</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map, Key key, <a class="el" href="union_node_info.html">Value</a> defaultValue)</td></tr>
-<tr class="separator:a8413bf74c7fbc6cf38e31f4958b7f78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac34bfcc9b68c188eadd860a6219cc713"><td class="memItemLeft" align="right" valign="top"><a class="el" href="union_node_info.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#ac34bfcc9b68c188eadd860a6219cc713">hashmap_forceGet</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map, Key key)</td></tr>
-<tr class="separator:ac34bfcc9b68c188eadd860a6219cc713"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca70c1e874a2c03744e70b73ab687380"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#aca70c1e874a2c03744e70b73ab687380">hashmap_containsKey</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map, Key key)</td></tr>
-<tr class="separator:aca70c1e874a2c03744e70b73ab687380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bed1be1c3a4fb9b48bc42391bc35d22"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#a3bed1be1c3a4fb9b48bc42391bc35d22">hashmap_hashCode</a> (HashmapKey key)</td></tr>
+<tr class="separator:a3bed1be1c3a4fb9b48bc42391bc35d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9721c859ffb61d0f49d66e5a9f6943f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#a9721c859ffb61d0f49d66e5a9f6943f9">hashmap_put</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map, HashmapKey key, <a class="el" href="union_node_info.html">HashmapValue</a> value)</td></tr>
+<tr class="separator:a9721c859ffb61d0f49d66e5a9f6943f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17048d3c62e7cb9bdd63f505ca6707e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="union_node_info.html">HashmapValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#aa17048d3c62e7cb9bdd63f505ca6707e">hashmap_get</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map, HashmapKey key, <a class="el" href="union_node_info.html">HashmapValue</a> defaultValue)</td></tr>
+<tr class="separator:aa17048d3c62e7cb9bdd63f505ca6707e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ae058535d0f31c30f83a5d96fb5e9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="union_node_info.html">HashmapValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#a00ae058535d0f31c30f83a5d96fb5e9a">hashmap_forceGet</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map, HashmapKey key)</td></tr>
+<tr class="separator:a00ae058535d0f31c30f83a5d96fb5e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5968ee0c70feef84aff90b7bf8121f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#ad5968ee0c70feef84aff90b7bf8121f7">hashmap_containsKey</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map, HashmapKey key)</td></tr>
+<tr class="separator:ad5968ee0c70feef84aff90b7bf8121f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdff7e968941ed98fa14e09a7a63c464"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#acdff7e968941ed98fa14e09a7a63c464">hashmap_size</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map)</td></tr>
 <tr class="separator:acdff7e968941ed98fa14e09a7a63c464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e1d5e863e8d29a11892f216f752aaa5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#a2e1d5e863e8d29a11892f216f752aaa5">hashmap_isEmpty</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map)</td></tr>
 <tr class="separator:a2e1d5e863e8d29a11892f216f752aaa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a293996ae4cc71b3b5a0b6d75e4e35f3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_hash_map_entry.html">HashMapEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#a293996ae4cc71b3b5a0b6d75e4e35f3f">hashmap_entryArr</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map)</td></tr>
 <tr class="separator:a293996ae4cc71b3b5a0b6d75e4e35f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93fe47746838c395cb52525fb2bd17c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_hash_map_entry.html">HashMapEntry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#a93fe47746838c395cb52525fb2bd17c2">hashmap_remove</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map, Key key)</td></tr>
-<tr class="separator:a93fe47746838c395cb52525fb2bd17c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c06b804c2505278ece0ad485d46a71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_hash_map_entry.html">HashMapEntry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#a33c06b804c2505278ece0ad485d46a71">hashmap_remove</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map, HashmapKey key)</td></tr>
+<tr class="separator:a33c06b804c2505278ece0ad485d46a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2c499bd17cdbe85e60a9fe5bf80bd9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#ab2c499bd17cdbe85e60a9fe5bf80bd9b">hashmap_clear</a> (<a class="el" href="struct_hash_map.html">HashMap</a> map)</td></tr>
 <tr class="separator:ab2c499bd17cdbe85e60a9fe5bf80bd9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37602263fba221aaa8d92c8eb7ea69c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hashmap_8c.html#a37602263fba221aaa8d92c8eb7ea69c2">hashmap_removeMap</a> (<a class="el" href="struct_hash_map.html">HashMap</a> *map)</td></tr>
@@ -166,8 +166,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aca70c1e874a2c03744e70b73ab687380"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca70c1e874a2c03744e70b73ab687380">&#9670;&nbsp;</a></span>hashmap_containsKey()</h2>
+<a id="ad5968ee0c70feef84aff90b7bf8121f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5968ee0c70feef84aff90b7bf8121f7">&#9670;&nbsp;</a></span>hashmap_containsKey()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,7 +181,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Key&#160;</td>
+          <td class="paramtype">HashmapKey&#160;</td>
           <td class="paramname"><em>key</em>&#160;</td>
         </tr>
         <tr>
@@ -253,14 +253,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac34bfcc9b68c188eadd860a6219cc713"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac34bfcc9b68c188eadd860a6219cc713">&#9670;&nbsp;</a></span>hashmap_forceGet()</h2>
+<a id="a00ae058535d0f31c30f83a5d96fb5e9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ae058535d0f31c30f83a5d96fb5e9a">&#9670;&nbsp;</a></span>hashmap_forceGet()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="union_node_info.html">Value</a> hashmap_forceGet </td>
+          <td class="memname"><a class="el" href="union_node_info.html">HashmapValue</a> hashmap_forceGet </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_hash_map.html">HashMap</a>&#160;</td>
           <td class="paramname"><em>map</em>, </td>
@@ -268,7 +268,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Key&#160;</td>
+          <td class="paramtype">HashmapKey&#160;</td>
           <td class="paramname"><em>key</em>&#160;</td>
         </tr>
         <tr>
@@ -278,7 +278,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the value to which the specified key is mapped </p><dl class="section warning"><dt>Warning</dt><dd>If you are not sure that the key exists, you should check it with the help of the <a class="el" href="hashmap_8c.html#aca70c1e874a2c03744e70b73ab687380">hashmap_containsKey(HashMap map, Key key)</a> or use a <a class="el" href="hashmap_8c.html#a8413bf74c7fbc6cf38e31f4958b7f78a">hashmap_get(HashMap map, Key key, Value defaultValue)</a> that will return the default value if the key is not defined. </dd>
+<p>Returns the value to which the specified key is mapped </p><dl class="section warning"><dt>Warning</dt><dd>If you are not sure that the key exists, you should check it with the help of the <a class="el" href="hashmap_8c.html#ad5968ee0c70feef84aff90b7bf8121f7">hashmap_containsKey(HashMap map, HashmapKey key)</a> or use a <a class="el" href="hashmap_8c.html#aa17048d3c62e7cb9bdd63f505ca6707e">hashmap_get(HashMap map, HashmapKey key, HashmapValue defaultValue)</a> that will return the default value if the key is not defined. </dd>
 <dd>
 When using this function with a non-existing key, the behavior is undefined. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -292,14 +292,14 @@ When using this function with a non-existing key, the behavior is undefined. </d
 
 </div>
 </div>
-<a id="a8413bf74c7fbc6cf38e31f4958b7f78a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8413bf74c7fbc6cf38e31f4958b7f78a">&#9670;&nbsp;</a></span>hashmap_get()</h2>
+<a id="aa17048d3c62e7cb9bdd63f505ca6707e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa17048d3c62e7cb9bdd63f505ca6707e">&#9670;&nbsp;</a></span>hashmap_get()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="union_node_info.html">Value</a> hashmap_get </td>
+          <td class="memname"><a class="el" href="union_node_info.html">HashmapValue</a> hashmap_get </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_hash_map.html">HashMap</a>&#160;</td>
           <td class="paramname"><em>map</em>, </td>
@@ -307,13 +307,13 @@ When using this function with a non-existing key, the behavior is undefined. </d
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Key&#160;</td>
+          <td class="paramtype">HashmapKey&#160;</td>
           <td class="paramname"><em>key</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="union_node_info.html">Value</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="union_node_info.html">HashmapValue</a>&#160;</td>
           <td class="paramname"><em>defaultValue</em>&#160;</td>
         </tr>
         <tr>
@@ -327,7 +327,7 @@ When using this function with a non-existing key, the behavior is undefined. </d
   <table class="params">
     <tr><td class="paramname">map</td><td><a class="el" href="struct_hash_map.html">HashMap</a> </td></tr>
     <tr><td class="paramname">key</td><td>the key whose associated value is to be returned </td></tr>
-    <tr><td class="paramname">defaultValue</td><td>- The value that will be returned if the key does not exist. If you are sure of a key, use <a class="el" href="hashmap_8c.html#ac34bfcc9b68c188eadd860a6219cc713">hashmap_forceGet(HashMap map, Key key)</a> </td></tr>
+    <tr><td class="paramname">defaultValue</td><td>- The value that will be returned if the key does not exist. If you are sure of a key, use <a class="el" href="hashmap_8c.html#a00ae058535d0f31c30f83a5d96fb5e9a">hashmap_forceGet(HashMap map, HashmapKey key)</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -335,8 +335,8 @@ When using this function with a non-existing key, the behavior is undefined. </d
 
 </div>
 </div>
-<a id="af1730a90e32ce091daa97b0f07fe14f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1730a90e32ce091daa97b0f07fe14f4">&#9670;&nbsp;</a></span>hashmap_hashCode()</h2>
+<a id="a3bed1be1c3a4fb9b48bc42391bc35d22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bed1be1c3a4fb9b48bc42391bc35d22">&#9670;&nbsp;</a></span>hashmap_hashCode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -344,7 +344,7 @@ When using this function with a non-existing key, the behavior is undefined. </d
         <tr>
           <td class="memname">unsigned int hashmap_hashCode </td>
           <td>(</td>
-          <td class="paramtype">Key&#160;</td>
+          <td class="paramtype">HashmapKey&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>
           <td></td>
         </tr>
@@ -385,8 +385,8 @@ When using this function with a non-existing key, the behavior is undefined. </d
 
 </div>
 </div>
-<a id="a5d5b1463ca6fa5121dae6b4fce78630e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d5b1463ca6fa5121dae6b4fce78630e">&#9670;&nbsp;</a></span>hashmap_put()</h2>
+<a id="a9721c859ffb61d0f49d66e5a9f6943f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9721c859ffb61d0f49d66e5a9f6943f9">&#9670;&nbsp;</a></span>hashmap_put()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -400,13 +400,13 @@ When using this function with a non-existing key, the behavior is undefined. </d
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Key&#160;</td>
+          <td class="paramtype">HashmapKey&#160;</td>
           <td class="paramname"><em>key</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="union_node_info.html">Value</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="union_node_info.html">HashmapValue</a>&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
@@ -426,8 +426,8 @@ When using this function with a non-existing key, the behavior is undefined. </d
 
 </div>
 </div>
-<a id="a93fe47746838c395cb52525fb2bd17c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93fe47746838c395cb52525fb2bd17c2">&#9670;&nbsp;</a></span>hashmap_remove()</h2>
+<a id="a33c06b804c2505278ece0ad485d46a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33c06b804c2505278ece0ad485d46a71">&#9670;&nbsp;</a></span>hashmap_remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -441,7 +441,7 @@ When using this function with a non-existing key, the behavior is undefined. </d
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Key&#160;</td>
+          <td class="paramtype">HashmapKey&#160;</td>
           <td class="paramname"><em>key</em>&#160;</td>
         </tr>
         <tr>
@@ -518,7 +518,7 @@ When using this function with a non-existing key, the behavior is undefined. </d
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d5762d0567c4c00fccbddb05db217c60.html">collections</a></li><li class="navelem"><a class="el" href="dir_abd213e5aa7d55a2e4f938e9fd68a1e3.html">hashmap</a></li><li class="navelem"><a class="el" href="hashmap_8c.html">hashmap.c</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e20f5f050a3be480293532e15537c055.html">collections</a></li><li class="navelem"><a class="el" href="dir_6718c31c5728ea0e67eeb88a52e233bd.html">hashmap</a></li><li class="navelem"><a class="el" href="hashmap_8c.html">hashmap.c</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>

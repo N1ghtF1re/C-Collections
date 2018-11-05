@@ -1,9 +1,0 @@
-digraph "collections/hashmap" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_d5762d0567c4c00fccbddb05db217c60 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="collections" fontname="Helvetica", fontsize="10", URL="dir_d5762d0567c4c00fccbddb05db217c60.html"]
-  dir_abd213e5aa7d55a2e4f938e9fd68a1e3 [shape=box, label="hashmap", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_abd213e5aa7d55a2e4f938e9fd68a1e3.html"];
-  }
-}

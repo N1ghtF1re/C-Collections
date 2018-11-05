@@ -16,6 +16,10 @@
 
 /* ### UTILS ### */
 
+/**
+ * Creating a list head
+ * @return Pointer to the created head
+ */
 Node* list_create() {
     Node *el = (Node*) malloc(sizeof(Node));
     el->next = NULL;

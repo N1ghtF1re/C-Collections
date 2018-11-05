@@ -11,6 +11,11 @@
 #include "stack.h"
 #include "../list/list.h"
 
+
+/**
+ * Creating a stack head
+ * @return Pointer to the created head
+ */
 Node* stack_create() {
     return list_create();
 }

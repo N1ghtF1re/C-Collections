@@ -1,0 +1,9 @@
+digraph "src/collections/list" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e20f5f050a3be480293532e15537c055 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="collections" fontname="Helvetica", fontsize="10", URL="dir_e20f5f050a3be480293532e15537c055.html"]
+  dir_e44d6bb43d3ab5c46db7134baf917e00 [shape=box, label="list", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_e44d6bb43d3ab5c46db7134baf917e00.html"];
+  }
+}
