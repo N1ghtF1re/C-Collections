@@ -8,7 +8,7 @@
 #include "collections/list/list.h"
 #include "collections/stack/stack.h"
 #include "collections/queue/queue.h"
-
+#include "collections/tree/binarysearchtree.h"
 #include "collections/hashmap/hashmap.h"
 
 void intOutputArr(NodeInfo* arr, int size) {
@@ -78,7 +78,7 @@ void stackDemo() {
     printf("Placed values:\n");
     for(int i = 0; i < n; i++) {
         printf("%d\n", i);
-        Value value;
+        NodeInfo value;
         value.intValue = i;
         stack_push(stack, value);
     }
@@ -106,7 +106,7 @@ void queueDemo() {
     printf("Placed values:\n");
     for (int i = 0; i < n; i++) {
         printf("%d\n", i);
-        Value value;
+        NodeInfo value;
         value.intValue = i;
         queue_add(queue, value);
     }
@@ -126,10 +126,10 @@ void queueDemo() {
 void hashMapDemo() {
     printf("\n\n\n---------- HASHMAP DEMO ----------\n");
     HashMap map = hashmap_create(100);
-    Value defaultValue;
+    HashmapValue defaultValue;
     defaultValue.intValue = -1;
 
-    Value value;
+    HashmapValue value;
 
     printf("\nIS_EMPTY: %d\n", hashmap_isEmpty(map));
 
@@ -153,10 +153,49 @@ void hashMapDemo() {
     }
 }
 
+void binarySearchTreeDemo() {
+    printf("\n\n\n---------- BINARY SEARCH TREE DEMO ----------\n");
+    HashmapValue info;
+
+    info.intValue = 1;
+
+    TreeNode *root = bst_create(5, info);
+
+    info.intValue = 2;
+    bst_insert(root, 7, info);
+    info.intValue = 3;
+    bst_insert(root, 9, info);
+    info.intValue = 4;
+    bst_insert(root, 6, info);
+
+    printf("Contains Key 5: %d\n", bst_containsKey(root, 5));
+    printf("Contains Key 6: %d\n", bst_containsKey(root, 6));
+    printf("Contains Key 7: %d\n", bst_containsKey(root, 7));
+    printf("Contains Key 15: %d\n\n", bst_containsKey(root, 15));
+
+    printf("Value of key 5: %d\n", bst_find(root, 5).intValue);
+    printf("Value of key 9: %d\n", bst_find(root, 9).intValue);
+
+    info.intValue = 10;
+    bst_insert(root, 5, info);
+    printf("Value of key 5: %d\n", bst_find(root, 5).intValue);
+    info.intValue = 11;
+    bst_insert(root, 9, info);
+    printf("Value of key 9: %d\n", bst_find(root, 9).intValue);
+
+    bst_remove(root, 6);
+    bst_removeTree(&root);
+    if(!root) {
+        printf("\nBinary Search Tree removed\n");
+    }
+
+}
+
 int main() {
     listDemo();
     stackDemo();
     queueDemo();
     hashMapDemo();
+    binarySearchTreeDemo();
     return 0;
 }
