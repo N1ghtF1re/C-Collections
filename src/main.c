@@ -183,8 +183,17 @@ void binarySearchTreeDemo() {
     bst_insert(root, 9, info);
     printf("Value of key 9: %d\n", bst_find(root, 9).intValue);
 
+    printf("\n\nTREE: \n");
+    bst_output(root);
+
     bst_remove(root, 6);
+
+    printf("\n\nTREE: \n");
+    bst_output(root);
+
     bst_removeTree(&root);
+
+
     if(!root) {
         printf("\nBinary Search Tree removed\n");
     }
