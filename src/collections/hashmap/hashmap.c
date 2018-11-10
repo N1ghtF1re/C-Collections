@@ -126,6 +126,7 @@ HashmapValue hashmap_get(HashMap map, HashmapKey key, HashmapValue defaultValue)
  */
 HashmapValue hashmap_forceGet(HashMap map, HashmapKey key) {
     HashmapValue value;
+    value.pointerValue = NULL;
     errno = EINVAL;
     perror("Appeal to non-existent key");
     perror(key);
