@@ -12,6 +12,8 @@ var binarysearchtree_8c =
     [ "bst_isKeyAbove", "binarysearchtree_8c.html#a7bfafa40e180764d86db09db1d23ecbe", null ],
     [ "bst_isKeyBelow", "binarysearchtree_8c.html#a7a0e58be3e6c8473b64929fb908f4bc7", null ],
     [ "bst_isKeyEquals", "binarysearchtree_8c.html#a1a29587f335938e6bdf14d3da4d7394f", null ],
+    [ "bst_outIter", "binarysearchtree_8c.html#af5507cc75222e5defbf2007e2867260d", null ],
+    [ "bst_output", "binarysearchtree_8c.html#a0e7d7f257fa76c18aed8a427ff6ffc5e", null ],
     [ "bst_remove", "binarysearchtree_8c.html#ae3b04d356b2d3e6ec2df334799ba8f80", null ],
     [ "bst_removeByPointer", "binarysearchtree_8c.html#a355528b53f324c3563e3b82579846ccf", null ],
     [ "bst_removeByPointerWithChilds", "binarysearchtree_8c.html#ab75cb87d2648fb43f5c015764f3ecc99", null ],

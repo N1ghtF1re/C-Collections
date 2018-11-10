@@ -12,6 +12,7 @@ var binarysearchtree_8h =
     [ "bst_findMax", "binarysearchtree_8h.html#a9b1cce91425d96ce325634dfd7aa5c89", null ],
     [ "bst_findMin", "binarysearchtree_8h.html#ae0b5c32d3df2a6f3e31fc1389682f97b", null ],
     [ "bst_insert", "binarysearchtree_8h.html#ab07c82f36288930aefb40741ea68d3b7", null ],
+    [ "bst_output", "binarysearchtree_8h.html#a0e7d7f257fa76c18aed8a427ff6ffc5e", null ],
     [ "bst_remove", "binarysearchtree_8h.html#ae3b04d356b2d3e6ec2df334799ba8f80", null ],
     [ "bst_removeTree", "binarysearchtree_8h.html#ac41b5bd3923402036bc53b78d0132f76", null ],
     [ "bst_removeWithChilds", "binarysearchtree_8h.html#ab7099f47a89af6ba616841096b12fe87", null ]
