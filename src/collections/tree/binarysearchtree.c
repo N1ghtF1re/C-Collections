@@ -9,6 +9,7 @@
  */
 
 #include <stdlib.h>
+#include <stdio.h>
 #include "binarysearchtree.h"
 
 #define true 1
@@ -127,6 +128,7 @@ void bst_insert(TreeNode *root, BstKey key, NodeInfo data) {
                 tmp->left = bts_createItem(tmp, key, data);
                 return;
             }
+            tmp = tmp->left;
         } else {
             tmp->info.value = data;
             return;
@@ -255,6 +257,7 @@ void bst_removeByPointerWithChilds(TreeNode *node) {
     }
     bst_removeByPointerWithChilds(node->left);
     bst_removeByPointerWithChilds(node->right);
+    bst_removeByPointer(node);
     free(node);
 }
 
@@ -289,4 +292,26 @@ void bst_removeWithChilds(TreeNode *root, BstKey key) {
 void bst_removeTree(TreeNode **root) {
     bst_removeByPointerWithChilds((*root));
     (*root) = NULL;
+}
+
+/**
+ * Iteration of tree output
+ * @param item - Pointer to the item
+ * @param iteration - iteration number
+ */
+void bst_outIter(TreeNode *item, int iteration) {
+    for(int i = 0; i <= iteration; i++) {
+        printf(" ");
+    }
+    printf("%d : %d\n", item->info.key, item->info.value);
+    if(item->right != NULL) bst_outIter(item->right, iteration + 1);
+    if(item->left != NULL) bst_outIter(item->left, iteration + 1);
+}
+
+/**
+ * Tree output
+ * @param root - Pointer to the root of the tree
+ */
+void bst_output(TreeNode *root) {
+    bst_outIter(root, 0);
 }

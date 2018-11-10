@@ -41,5 +41,6 @@ void bst_remove(TreeNode *root, BstKey key);
 void bst_removeWithChilds(TreeNode *root, BstKey key);
 void bst_removeTree(TreeNode **root);
 int bst_containsKey(TreeNode *root, BstKey key);
+void bst_output(TreeNode *root);
 
 #endif //BINARYSEARCHTREE_H
