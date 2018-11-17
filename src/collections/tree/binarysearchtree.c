@@ -257,7 +257,8 @@ void bst_removeByPointerWithChilds(TreeNode *node) {
     }
     bst_removeByPointerWithChilds(node->left);
     bst_removeByPointerWithChilds(node->right);
-    bst_removeByPointer(node);
+    if(node->parent != NULL)
+        bst_removeByPointer(node);
     free(node);
 }
 
